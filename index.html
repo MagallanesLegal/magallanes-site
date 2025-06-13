@@ -1,136 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF‑8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Estudio Jurídico Magallanes</title>
   <style>
     :root {
       --verde-oscuro: #1a3d2f;
       --dorado: #d4af37;
       --grafito: #2b2b2b;
-      --blanco: #f5f5f5;
+      --gris-claro: #f0f0f0;
+      --blanco: #ffffff;
     }
-
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--blanco);
+      font-family: sans-serif;
       color: var(--grafito);
+      background: var(--blanco);
     }
-
     header {
-      background-color: var(--verde-oscuro);
+      background: var(--verde-oscuro) url('tu-fondo.jpg') no-repeat center/cover;
       color: var(--blanco);
+      padding: 6rem 1rem;
       text-align: center;
-      padding: 2rem;
+      position: relative;
     }
-
+    header::after {
+      content: '';
+      position: absolute; top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(26, 61, 47, 0.7);
+    }
+    header img {
+      position: relative;
+      max-width: 150px;
+      z-index:2;
+    }
     header h1 {
-      margin: 0;
+      position: relative; z-index:2;
       font-size: 2.5rem;
+      margin: 1rem 0 0.5rem;
     }
-
     header p {
-      font-size: 1.2rem;
+      position: relative; z-index:2;
       color: var(--dorado);
+      font-size: 1.2rem;
     }
-
     nav {
-      background-color: var(--grafito);
-      display: flex;
-      justify-content: center;
+      background: var(--grafito);
+      position: sticky; top:0;
+      z-index: 5;
+      display: flex; justify-content: center;
       padding: 1rem;
-      flex-wrap: wrap;
     }
-
     nav a {
       color: var(--dorado);
       margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1rem;
     }
-
     nav a:hover {
       text-decoration: underline;
     }
-
     section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      background-color: white;
-      margin-top: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 4rem 1rem;
+      max-width: 900px; margin:auto;
     }
-
+    section:nth-child(even) {
+      background: var(--gris-claro);
+    }
     section h2 {
       color: var(--verde-oscuro);
       border-bottom: 2px solid var(--dorado);
+      margin-bottom: 1rem;
       padding-bottom: 0.5rem;
     }
-
+    .btn {
+      display: inline-block;
+      background: var(--dorado);
+      color: var(--blanco);
+      padding: 0.75rem 1.5rem;
+      border: none; border-radius: 4px;
+      text-decoration: none; font-weight: bold;
+      margin-top:1rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width:100%; padding:0.75rem;
+      margin-bottom:1rem;
+      border:1px solid #ccc;
+      border-radius:4px;
+      font-size:1rem;
+    }
+    .contact-form button {
+      background: var(--verde-oscuro);
+      color: var(--blanco);
+      padding: 0.75rem 1.5rem;
+      border:none; border-radius:4px;
+      font-size:1rem; cursor:pointer;
+    }
     footer {
-      background-color: var(--grafito);
-      color: white;
+      background: var(--grafito);
+      color: var(--blanco);
       text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
+      padding: 2rem 1rem;
     }
-
-    ul {
-      padding-left: 1.5rem;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-      }
-
-      nav a {
-        margin: 0.5rem 0;
-      }
+    @media (max-width:768px) {
+      header h1 { font-size:2rem; }
+      nav { flex-direction:column; }
+      nav a { margin:0.5rem 0; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Estudio Jurídico Magallanes</h1>
-    <p>Comprometidos con la justicia y la transparencia</p>
-  </header>
 
-  <nav>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+<header>
+  <img src="logoml.jpg" alt="Logo Magallanes Legal" />
+  <h1>Estudio Jurídico Magallanes</h1>
+  <p>Comprometidos con la justicia y la transparencia</p>
+</header>
 
-  <section id="nosotros">
-    <h2>Quiénes Somos</h2>
-    <p>Somos un equipo de abogados con sólida formación jurídica y más de 15 años de experiencia en derecho civil, penal, laboral y de familia. Nuestro compromiso está con las personas, buscando siempre soluciones jurídicas efectivas y humanas.</p>
-  </section>
+<nav>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#contacto">Contacto</a>
+</nav>
 
-  <section id="servicios">
-    <h2>Servicios</h2>
-    <ul>
-      <li>Asesoría legal personalizada</li>
-      <li>Representación judicial en Ushuaia y toda la provincia</li>
-      <li>Redacción de contratos y documentos legales</li>
-      <li>Consultoría en derecho laboral, penal y familiar</li>
-    </ul>
-  </section>
+<section id="nosotros">
+  <h2>Quiénes Somos</h2>
+  <p>Abogados con más de 15 años en derecho civil, penal, laboral y familiar. Soluciones eficaces y cercanas.</p>
+</section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p><strong>Email:</strong> <a href="mailto:legalmagallanes@gmail.com">legalmagallanes@gmail.com</a></p>
-    <p><strong>Teléfono:</strong> <a href="tel:+542901626084">+54 2901 626084</a></p>
-    <p><strong>Dirección:</strong> Magallanes 2556, Ushuaia, Tierra del Fuego (CP 9410)</p>
-  </section>
+<section id="servicios">
+  <h2>Servicios</h2>
+  <ul>
+    <li>Asesoría legal personalizada</li>
+    <li>Representación judicial en Ushuaia y Tierra del Fuego</li>
+    <li>Redacción de contratos y documentos</li>
+    <li>Consultoría en derecho laboral, penal y familiar</li>
+  </ul>
+  <a class="btn" href="#contacto">Contactanos</a>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Estudio Jurídico Magallanes. Todos los derechos reservados.</p>
-  </footer>
+<section id="contacto">
+  <h2>Contacto</h2>
+  <form class="contact-form" action="https://formsubmit.co/legalmagallanes@gmail.com" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <textarea name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
+    <button type="submit">Enviar Mensaje</button>
+  </form>
+  <p>📧 legalmagallanes@gmail.com • 📞 +54 2901 626084</p>
+  <p>📍 Magallanes 2556, Ushuaia, Tierra del Fuego (CP 9410)</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Estudio Jurídico Magallanes</p>
+</footer>
+
 </body>
 </html>
