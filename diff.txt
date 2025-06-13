@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estudio Jurídico Magallanes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #222;
+      color: white;
+      padding: 2rem 1rem;
+    }
+    section {
+      padding: 2rem;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 1rem;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Magallanes Legal</h1>
+    <p>Comprometidos con la justicia y la transparencia</p>
+  </header>
+
+  <section>
+    <h2>Bienvenidos</h2>
+    <p>Somos un estudio jurídico especializado en derecho civil, laboral y penal.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Magallanes Legal - Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
